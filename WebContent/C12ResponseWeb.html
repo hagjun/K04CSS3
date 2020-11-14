@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style type="text/css">
+    /* 전체선택자를 통해 문서의 기본스타일 지정*/
+    *{margin: 0%; padding: 0%; font-family: verdana;}
+
+    /* block 엘리먼트 자체에 대한 가운데 정렬을 위해 margin을 사용한다.
+    적용되지 않는 브라우저가 있다면 text-aline을 통해 정렬한다. */
+    #AllWrap{
+        margin: 0 auto; text-align: center;    
+    }
+
+
+    #PartWrap{
+        width: 100%; text-align: left;
+        border: 1px solid blue;
+    }
+    #header{
+        border: 1px solid blue; text-align: center;
+        height: 100%; line-height: 100px;
+    }
+    /*
+    li태그의 기본 블릿을 제거한다.
+    overflow의 속성
+        visible : 컨텐츠가 박스를 넘어가도 보이게 처리
+        hidden : 박스를 벗어난 부분은 숨김처리
+        scroll : 컨텐츠의 크기와 상관없이 스크롤바 생김
+        auto : 컨텐츠의 크기에 따라 스크롤바가 토글됨
+    */
+    #nav ul{
+        list-style: none;
+
+        overflow: hidden;
+    }
+    #nav ul li{
+        font-size: 1.5em; font-weight: bold; height: 50px;
+        width: 20%; float: left; border: 1px solid blue;
+        text-align: center; line-height: 50px;
+        /* 전체넓이에 패딩과 보더를 포함하여 지정한다. */
+        box-sizing: border-box;
+    }
+    #ContentWrap #content > h2{
+        border-bottom: 1px #808080 solid;
+        font-size: 2em;
+    }
+    #content{
+        padding: 20px;
+    }
+    #footer{
+        font-size: 2em; font-weight: bold; height: 100px;
+        line-height: 100px; text-align: center;
+        border: 1px solid blue;
+    }
+    /*
+        반응형웹을 구현하기 위해 미디어쿼리를 사용한다.
+        디바이스(단말기)의 해상도에 따라 다른 형태의 화면을
+        보여주게 된다. 이경우 모바일용 웹화면을 별도로 제작하지
+        않아도 되므로 편리하다. 
+    */
+    /* 스크린의 크기가 640이하일때의 하면 설정 */
+    @media screen and (max-width:640px){
+        #AllWrap{ width: 100%; }
+        #content p{
+            font-size: 2em; color: black;
+        }
+    }
+
+    /* 1000이상일때의 설정 */
+    @media screen and (min-width:1000px){
+        #AllWrap{ width: 80%; }
+        #content p{
+            font-size: 1em; color: green;
+        }
+    }
+    /* 스크린의 크기가 641~999사이일때 설정 */
+    @media screen and (min-width:641px) and (max-width:999px){
+        #AllWrap{ width: 100%; }
+        #content p{
+            font-size: 1.5em; color: red;
+            background-color: black;
+        }
+    }
+</style>
+</head>
+<body>
+    <div id="AllWrap">
+        <div id="PartWrap">
+            <div id="header"></div>
+                <h1>HEADER</h1>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li>메뉴1입니다</li>
+                    <li>메뉴2</li>
+                    <li>메뉴3</li>
+                    <li>메뉴4</li>
+                    <li>메뉴5</li>
+                </ul>
+            </div>
+        </div>
+
+    <div id="ContentWrap">
+        <div id="content">
+            <h2>‘바람의 아들’ 이종범, 아들 이정후→500원 모양 원형탈모까지 입담 폭발(‘불청’)</h2>
+            <p>
+                [OSEN=강서정 기자] ‘불타는 청춘’에는 연말특집 1탄 ‘깨복쟁이 친구’로 
+                야구의 신이자 바람의 아들인 이종범이 박재홍의 어린시절 동네 형으로 출격해 뜨거운 화제를 끌었다.   
+닐슨 코리아에 따르면, 10일 방송된 SBS ‘불타는 청춘’은 가구 시청률 6.0%, 5.7%로 전주 대비 시청률이 상승했다. 
+특히, 화제성과 경쟁력 지표인 2049 타겟 시청률은 2.2%를 기록해 화요 예능 1위에 등극했으며, 
+이종범이 등장해 청춘들과 만나는 순간에는 분당 최고 시청률이 7%까지 치솟았다.
+이날 청춘들은 안산 대부도로 여행을 떠났다. 이번 여행에는 불청의 오리지널 멤버인 강수지와 김완선, 
+이연수 등 반가운 친구들이 합류했고, 연말 요정 권성국까지 합세해 기대를 모았다. 제작진의 힌트를 통해 박재홍의 
+‘깨복쟁이 친구’로 이종범이 불청에 온다는 사실을 안 청춘들은 깜짝 놀라며 당황해 했다. 특히, 재홍이 “종범이 형이 성국 형하고 동갑이야”라고 하자 최성국은 “완전 형인줄 알았다.
+삼촌 뻘이라고 생각했다"며 놀라워했다.
+야구장에서 흘러나오던 BGM과 함께 이종범이 등장하자 청춘들은 너나할 것 없이 반가운 인사를 나눴다. 
+성국은 “동갑이라고 해서 깜짝 놀랐습니다”라고 하자 종범은 악력을 더한 강한(?) 악수로 격한 인사를 나눠 초반부터 웃음을 안겨줬다. 
+종범은 수지와 1997년 일본 활동 당시 서로 알고 있던 사이라고 밝혔고, 이연수는 종범의 아내와 인연으로 친분을 나눴다. 
+이어 성국과 마찬가지로 광규 역시 “나보다 형인 줄 알았다”고 하자 종범은 “모자 벗어봐요. 나랑 나이차이가 얼마나 많이 나는데!!”라며 흥분하기도 했다.
+이어 성국이 종범을 어려워하며 자신도 운동선수 친구가 있다며 이봉주와 전화 연결을 시도해 눈길을 끌었다. 
+종범과 이미 친구인 이봉주는 수화기 너머로 최성국에게 "우리 다 친구여. 편하게 해. 나한테 하는 것처럼"이라며 웃음을 남겼다.
+한편, 이종범은 청춘들과 함께 점심을 먹으며 재홍과 같은 동네에서 야구를 하던 어린시절을 회상했다. 
+초등학교 3학년때부터 야구를 시작한 종범은 "어릴 때 재홍이와 다방구 같은 술래잡기 놀이를 많이 하면서 뛰는 연습이 많이된 것 같다"고 언급했다. 
+그러자 재홍은 “형은 성격이 급해서 1루에 가만히 있지를 못하고 2루로 빨리 뛴다”며 종범의 도루왕 비결은 급한 성격임을 공개했다.
+
+또 종범은 야구계 신성으로 주목을 받고 있는 아들 이정후에 대한 솔직한 심경도 털어놓았다. 이종범은 “아들 경기 해설을 해봤는데, 
+잘할 때 칭찬을 해야할지 말아야할지 모르겠더라. 그래서 아들 경기 때는 해설을 빼달라고 부탁한다”고 전했다. 
+이어 재홍이 “정후 역시 아버지가 이종범이니까 힘들었을 거다”라고 하자 종범은 “어느 팬의 댓글에 정후가 ‘당신이 이종범의 아들로 야구를 해봤느냐. 
+나는 그 부담을 이겨내고 여기까지 왔다’고 단 것을 보고 ‘이제 다 컸구나’ 느꼈다”고 말해 공감을 자아냈다.
+
+이어서 이종범은 일본 주니치 선수로 활동하던 시절 겪었던 슬럼프도 언급했다. 그는 “야구를 하러 갔어야 하는데 돈을 벌러 가니까 안되더라. 
+연봉보다 더 센 옵션들이 있다 보니 더 잘하기 위해 무리를 했다. 그렇게 잘 나갈 때 팔꿈치 부상을 당했고, 그때부터 슬럼프가 찾아왔다. 
+스트레스가 너무 심해서 500원짜리 동전 모양의 원형 탈모가 두 개나 생겼다”고 털어놓았다. 
+이에 재홍은 “그래서 야구팬들이 ‘이종범 야구는 원형 탈모 전과 후로 나뉜다’고 말한다”고 덧붙였다.
+
+종범의 원형탈모 고백에 옆에서 듣던 강수지 역시 “뮤지컬 공연으로 일본 활동을 계약했는데, 일본말을 하나도 모르고 갔다. 
+일본어로 공연을 하고 한국말을 하루종일 못하니까 어느 날 가르마를 바꿔보려고 머리를 봤는데, 가운데 원형탈모가 심하게 생겼더라”고 말했다. 
+이에 김광규는 “이제 탈모 이야기는 그만하자”고 언급해 웃음을 자아냈다.
+            </p>
+        </div>
+    </div>
+    <div id="footer">
+        <h1>FOOTER</h1>
+    </div>
+</div>
+</body>
+</html>
