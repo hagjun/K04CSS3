@@ -7,9 +7,20 @@
         <title>Registration02</title>
 
 <style>
-    table{
+    
+    fieldset{
+        width: 1000px; height: 1400px; background-color:#F9F9F9;
+    }
+
+    #a1{
         background-color: #FFFFFF; color: #020202; width: 1000px; height:  1000px;
-        border: 1px solid gray; 
+        border-top: 2px solid black;border-bottom:1px solid gray ; border-left:1px solid gray ; border-right: 1px solid gray;
+    }
+
+    #a2{
+        background-color: #FFFFFF; color: #020202; width: 1000px; height:  250px;
+        border-top: 2px solid black;border-bottom:1px solid gray ; 
+        border-left:1px solid gray ; border-right: 1px solid gray;
     }
 
    
@@ -54,7 +65,7 @@
         padding: 5px;
     }
     #sig{
-        background-color: #274069; padding: 8pt; width: 15em;
+        background-color: #274069; color: white; padding: 8pt; width: 15em;
     }
 </style>
 
@@ -62,10 +73,11 @@
 
 </head>
 <body>
-    <table>
-    <tr>
-        <td style="size: ;">*필수입력사항</td>
-    </tr>
+    <fieldset>
+        <tr>
+            <div style="text-align: right;">*필수입력사항</div>
+        </tr>
+    <table id="a1"> 
     <tr>
         <th class="id">*&shy;아이디</th>
         <td style="color: gray; font-size: small;" class="gender">
@@ -172,43 +184,63 @@
         <input type="checkbox">미정
         </td>
     </tr>
-     
+    
+    
+    
+    
+</table>
+<br>
+    <tr>
+        <td>이용약관 동의*&shy; <span style="color: gray; font-size: small;">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</span></td>
+    </tr>
+
+
+<table id="a2" >
+    
     <tr>  
-        <th><input type="checkbox">전체동의</th>
-        
-       <br><br>
-        <td style="color: gray; font-size: small;" ><input type="checkbox">이용약관(필수)<a href="">약관보기></a>
-        <br><br>
-        <input type="checkbox" >개인정보처리방침(필수)<a href="" >약관보기></a>
-        <br><br>
-        <input type="checkbox">이벤트 및 혜택 알림 수신(선택)
-        <br><br>
-        <input type="checkbox" >SMS
-        <input type="checkbox">이메일
-        &nbsp; &nbsp;
+        <td>
+            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+       <th colspan="2" style="text-align: left;">
+        <input type="checkbox">전체동의</th>
         </td>
     </tr>
-    
-    
-    
-    <tr>
-        <td colspan="2">
-            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-            
-            
-            <button type="submit" id="sig">가입하기</button>
 
-        </td>
+    <tr>
+      <br><br>
+      <td></td>
+       <td colspan="2">
+        &nbsp; &nbsp;<input type="checkbox">이용약관<span style="font-size: small; color: gray;">(필수)</span><a href="">약관보기></a>
+            <br><br>
+            &nbsp; &nbsp;<input type="checkbox" >개인정보처리방침<span style="font-size: small; color: gray;">(필수)</span><a href="" >약관보기></a>
+            <br><br>
+            &nbsp; &nbsp;<input type="checkbox">이벤트 및 혜택 알림 수신<span style="font-size: small; color: gray;">(선택)</span>
+            <br><br>
+            &nbsp; &nbsp; &nbsp; &nbsp;<input type="checkbox" >SMS
+            &nbsp; &nbsp; &nbsp; &nbsp;<input type="checkbox">이메일
+            &nbsp; &nbsp;
+       </td>
     </tr>
     
     
     
     
 </table>
+        <br>
+        <tr>
+           <td colspan="2">
 
+               &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+               &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+               &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+               &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+       
+              
+               
+               <button type="submit" id="sig">가입하기</button>
+        
+           </td>
+        </tr>
+</fieldset>
 
 </body>
 </html>
